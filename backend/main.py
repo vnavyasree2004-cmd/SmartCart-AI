@@ -1,9 +1,13 @@
 from fastapi import FastAPI, Depends, HTTPException, status
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
 from pydantic import BaseModel
 from passlib.context import CryptContext
 from jose import jwt, JWTError
+from ml.recommendation import recommend_products
 
 from database import Base, engine, SessionLocal
 from models import (
@@ -565,4 +569,18 @@ def delete_cart_item(
 
     return {
         "message": "Cart item removed successfully"
+    }
+@app.get("/recommendations/{product_name}")
+def get_recommendations(product_name: str):
+    recommendations = recommend_products(product_name)
+
+    if not recommendations:
+        return {
+            "message": "Product not found",
+            "recommendations": []
+        }
+
+    return {
+        "product": product_name,
+        "recommendations": recommendations
     }

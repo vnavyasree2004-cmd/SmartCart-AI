@@ -5,6 +5,7 @@ from sqlalchemy.engine import URL
 from sqlalchemy.orm import sessionmaker, declarative_base
 
 
+Base = declarative_base()
 DATABASE_URL = URL.create(
     "postgresql+psycopg2",
     username="smartcartadmin",

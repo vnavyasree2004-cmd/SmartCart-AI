@@ -1,0 +1,16 @@
+product,category,price,popularity,rating
+Fresh Apples,Fruits,120,90,4.5
+Fresh Bananas,Fruits,60,85,4.3
+Fresh Oranges,Fruits,100,80,4.4
+Fresh Milk,Dairy,60,95,4.6
+Fresh Curd,Dairy,50,88,4.4
+Cheese,Dairy,150,75,4.5
+Fresh Bread,Bakery,45,92,4.3
+Brown Bread,Bakery,55,80,4.4
+Biscuits,Snacks,40,85,4.2
+Potato Chips,Snacks,30,90,4.1
+Orange Juice,Beverages,110,78,4.3
+Green Tea,Beverages,140,70,4.5
+Basmati Rice,Rice & Grains,180,94,4.6
+Wheat Flour,Rice & Grains,70,86,4.4
+Oats,Rice & Grains,120,82,4.5

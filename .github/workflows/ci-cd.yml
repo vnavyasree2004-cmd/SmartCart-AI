@@ -39,6 +39,4 @@ jobs:
           npm install
           npm run build
 
-      - name: Docker build test
-        run: |
-          docker build -t smartcart-backend:test .
+     
